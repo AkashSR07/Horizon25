@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+
+    --primary: 180 100% 50%;
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 300 100% 50%;
+    --secondary-foreground: 0 0% 0%;
+
+    --accent: 270 100% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --muted: 240 10% 20%;
+    --muted-foreground: 240 5% 65%;
+
+    --card: 240 10% 10%;
+    --card-foreground: 0 0% 100%;
+
+    --border: 240 10% 20%;
+    --input: 240 10% 20%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --ring: 300 100% 50%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+.text-glow {
+  text-shadow: 0 0 10px theme("colors.primary.DEFAULT"), 0 0 20px theme("colors.primary.DEFAULT");
+}
+
+.text-glow-secondary {
+  text-shadow: 0 0 10px theme("colors.secondary.DEFAULT"), 0 0 20px theme("colors.secondary.DEFAULT");
+}
+
+.text-glow-accent {
+  text-shadow: 0 0 10px theme("colors.accent.DEFAULT"), 0 0 20px theme("colors.accent.DEFAULT");
+}
+
+.neon-border {
+  box-shadow: 0 0 5px theme("colors.primary.DEFAULT"), 0 0 10px theme("colors.primary.DEFAULT"), inset 0 0 5px
+    theme("colors.primary.DEFAULT");
+}
+
+.neon-border-secondary {
+  box-shadow: 0 0 5px theme("colors.secondary.DEFAULT"), 0 0 10px theme("colors.secondary.DEFAULT"), inset 0 0 5px
+    theme("colors.secondary.DEFAULT");
+}
+
+.neon-border-accent {
+  box-shadow: 0 0 5px theme("colors.accent.DEFAULT"), 0 0 10px theme("colors.accent.DEFAULT"), inset 0 0 5px
+    theme("colors.accent.DEFAULT");
+}
+
+.cyberpunk-grid {
+  background-image: linear-gradient(to right, rgba(255, 0, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 0, 255, 0.1) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
